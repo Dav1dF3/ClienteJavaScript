@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <title>Instrumentos - Agregar Teclado</title>
     <meta charset="utf-8" />
@@ -9,6 +8,9 @@
     <meta name="generator" content="GrapesJS Studio" />
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../css/css_teclados/stylesagregarteclados.css">
+    <link rel="stylesheet" type= "text/css" href="../../jquery-ui-1.14.1.custom/jquery-ui.css">
+    <script src="../../jquery-3.7.1.min.js"></script>
+    <script src="../../jquery-ui-1.14.1.custom/jquery-ui.js"></script>
   </head>
 
   <body id="page-add-keyboard">
@@ -106,7 +108,7 @@
                 </div>
               </td>
               <td id="input-cell-date-keyboard">
-                <input type="text" id="input-date-keyboard" />
+                <input type="text" id="input-date-keyboard" readonly/>
               </td>
             </tr>
 
@@ -192,3 +194,12 @@
   </body>
 
 </html>
+
+<script type="text/javascript">
+  $( function() {
+    $( "#input-date-keyboard").datepicker({
+      changeMonth: true,
+      changeYear: true
+    });
+  });
+  </script>

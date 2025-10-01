@@ -8,6 +8,10 @@
     <meta name="generator" content="GrapesJS Studio" />
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../css/css_guitarras/stylesagregarguitarras.css">
+    <link rel="stylesheet" type= "text/css" href="../../jquery-ui-1.14.1.custom/jquery-ui.css">
+    <script src="../../jquery-3.7.1.min.js"></script>
+    <script src="../../jquery-ui-1.14.1.custom/jquery-ui.js"></script>
+
   </head>
 
   <body id="page-add-guitar">
@@ -99,6 +103,17 @@
               </td>
               <td id="input-cell-stock-guitar">
                 <input type="text" id="input-stock-guitar" />
+              </td>
+            </tr>
+
+            <tr id="row-date-guitar">
+              <td id="label-date-stock-guitar">
+                <div id="label-wrap-date-guitar">
+                  <b id="label-date-guitar">Fecha de creacion</b>
+                </div>
+              </td>
+              <td id="input-cell-date-guitar">
+                <input type="text" id="input-date-guitar" readonly />
               </td>
             </tr>
 
@@ -196,3 +211,12 @@
     </div>
   </body>
 </html>
+
+<script type="text/javascript">
+  $( function() {
+    $( "#input-date-guitar").datepicker({
+      changeMonth: true,
+      changeYear: true
+    });
+  });
+  </script>
