@@ -1,5 +1,6 @@
 <!DOCTYPE html> 
 <html>
+
   <head>
     <title>Instrumentos - Agregar Guitarra</title>
     <meta charset="utf-8" />
@@ -11,7 +12,6 @@
   </head>
 
   <body id="page-add-guitar">
-    <!-- HEADER -->
     <div id="header-row" class="gjs-grid-row">
       <div id="header-col" class="gjs-grid-column">
         <div id="header-inner-row" class="gjs-grid-row">
@@ -34,23 +34,20 @@
       </div>
     </div>
 
-    <!-- HERO TITLE -->
     <div id="hero-row" class="gjs-grid-row">
       <div id="hero-col" class="gjs-grid-column">
         <h1 id="hero-title" class="gjs-heading">Agregar Guitarra</h1>
       </div>
     </div>
 
-    <!-- HIDDEN RADIOS -->
+    <!-- radios ocultos (deben ir ANTES de las sections y como hijos directos de body) -->
     <input type="radio" name="funda" id="funda-si" value="si" hidden>
     <input type="radio" name="funda" id="funda-no" value="no" checked hidden>
 
-    <!-- MAIN FORM SECTION -->
     <section id="form-section-guitar" class="gjs-section">
       <div id="form-container-guitar" class="gjs-container">
         <table id="form-table-guitar">
           <tbody id="form-tablebody-guitar">
-            <!-- Código -->
             <tr id="row-code-guitar">
               <td id="label-cell-code-guitar">
                 <div id="label-wrap-code-guitar">
@@ -62,7 +59,6 @@
               </td>
             </tr>
 
-            <!-- Nombre -->
             <tr id="row-name-guitar">
               <td id="label-cell-name-guitar">
                 <div id="label-wrap-name-guitar">
@@ -74,7 +70,6 @@
               </td>
             </tr>
 
-            <!-- Marca -->
             <tr id="row-brand-guitar">
               <td id="label-cell-brand-guitar">
                 <div id="label-wrap-brand-guitar">
@@ -86,7 +81,6 @@
               </td>
             </tr>
 
-            <!-- Precio -->
             <tr id="row-price-guitar">
               <td id="label-cell-price-guitar">
                 <div id="label-wrap-price-guitar">
@@ -94,11 +88,10 @@
                 </div>
               </td>
               <td id="input-cell-price-guitar">
-                <input type="number" id="input-price-guitar" />
+                <input type="text" id="input-price-guitar" />
               </td>
             </tr>
 
-            <!-- Stock -->
             <tr id="row-stock-guitar">
               <td id="label-cell-stock-guitar">
                 <div id="label-wrap-stock-guitar">
@@ -106,10 +99,11 @@
                 </div>
               </td>
               <td id="input-cell-stock-guitar">
-                <input type="number" id="input-stock-guitar" />
+                <input type="text" id="input-stock-guitar" />
               </td>
             </tr>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             <tr id="row-date-guitar">
               <td id="label-cell-date-guitar">
@@ -125,6 +119,8 @@
 =======
             <!-- Tipo -->
 >>>>>>> 28ea54ccc7126edaca1c4310992af6c4c5b50284
+=======
+>>>>>>> parent of b914922 (Creacion de script y actualizacion de agregarGuitarra)
             <tr id="row-type-guitar">
               <td id="label-cell-type-guitar">
                 <div id="label-wrap-type-guitar">
@@ -133,16 +129,16 @@
               </td>
               <td id="input-cell-type-guitar">
                 <select id="select-type-guitar">
-                  <option value="">Seleccione una opción</option>
-                  <option value="Eléctrica">Eléctrica</option>
-                  <option value="Acústica">Acústica</option>
-                  <option value="Electroacústica">Electroacústica</option>
-                  <option value="Clásica">Clásica</option>
+                  <option value="opt1" id="opt-select-default-guitar">Seleccione una opción</option>
+                  <option value="electric" id="opt-electric-guitar">Electrica</option>
+                  <option value="acoustic" id="opt-acoustic-guitar">Acústica</option>
+                  <option value="electroacoustic" id="opt-electroacoustic-guitar">Electroacústica</option>
+                  <option value="classical" id="opt-classical-guitar">Clasica</option>
+                  <option value="other" id="opt-other-guitar">Otra</option>
                 </select>
               </td>
             </tr>
 
-            <!-- Material del cuerpo -->
             <tr id="row-material-guitar">
               <td id="label-cell-material-guitar">
                 <div id="label-wrap-material-guitar">
@@ -154,7 +150,6 @@
               </td>
             </tr>
 
-            <!-- Funda -->
             <tr id="row-case-guitar">
               <td id="label-cell-case-guitar">
                 <div id="label-wrap-case-guitar">
@@ -163,67 +158,32 @@
               </td>
               <td id="input-cell-case-guitar">
                 <div data-type-role="flex-row" id="case-choice-row" class="gjs-plg-flex-row">
-                  <div data-type-role="flex-column" id="case-choice-col-checkbox" class="gjs-plg-flex-column">
-                    <div data-type-role="flex-row" id="case-choice-inner-checkbox" class="gjs-plg-flex-row">
-                      <div data-type-role="flex-column" id="case-choice-col-checkbox-inner" class="gjs-plg-flex-column">
-                        <input type="checkbox" id="tieneFunda" name="tieneFunda">
-                        <label for="tieneFunda" id="label-funda">
-                          <b id="label-case">¿Tiene funda?</b>
+                  <div data-type-role="flex-column" id="case-choice-col-yes" class="gjs-plg-flex-column">
+                    <div data-type-role="flex-row" id="case-choice-inner-yes" class="gjs-plg-flex-row">
+                      <div data-type-role="flex-column" id="case-choice-col-yes-inner" class="gjs-plg-flex-column">
+                        <label for="funda-si" id="label-funda-si">
+                          <b id="label-case-yes">Si</b>
                         </label>
                       </div>
                     </div>
                   </div>
+
+                  <div data-type-role="flex-column" id="case-choice-col-no" class="gjs-plg-flex-column">
+                    <div data-type-role="flex-row" id="case-choice-inner-no" class="gjs-plg-flex-row">
+                      <div data-type-role="flex-column" id="case-choice-col-no-inner" class="gjs-plg-flex-column">
+                        <label for="funda-no" id="label-funda-no">
+                          <b id="label-case-no">No</b>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
               </td>
             </tr>
           </tbody>
         </table>
 
-        <!-- FUNDA DETAILS SECTION -->
-        <div class="gjs-container" id="form-container-case" style="display: none;">
-          <h3>Detalles de la Funda</h3>
-          <table id="form-table-case">
-            <tbody id="form-tablebody-case">
-              <!-- Código funda -->
-              <tr id="row-code-case">
-                <td id="label-cell-code-case">
-                  <div id="label-wrap-code-case">
-                    <b id="label-code-case">Código funda</b>
-                  </div>
-                </td>
-                <td id="input-cell-code-case">
-                  <input type="text" id="input-code-case" />
-                </td>
-              </tr>
-
-              <!-- Nombre funda -->
-              <tr id="row-name-case">
-                <td id="label-cell-name-case">
-                  <div id="label-wrap-name-case">
-                    <b id="label-name-case">Nombre</b>
-                  </div>
-                </td>
-                <td id="input-cell-name-case">
-                  <input type="text" id="input-name-case" />
-                </td>
-              </tr>
-
-              <!-- Precio funda -->
-              <tr id="row-price-case">
-                <td id="label-cell-price-case">
-                  <div id="label-wrap-price-case">
-                    <b id="label-price-case">Precio</b>
-                  </div>
-                </td>
-                <td id="input-cell-price-case">
-                  <input type="number" id="input-price-case" step="0.01" />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- ACTION BUTTONS -->
         <div data-type-role="flex-row" id="form-actions-guitar" class="gjs-plg-flex-row">
           <div data-type-role="flex-column" id="form-actions-left-guitar" class="gjs-plg-flex-column"></div>
           <div data-type-role="flex-column" id="form-actions-right-guitar" class="gjs-plg-flex-column">
@@ -233,29 +193,59 @@
       </div>
     </section>
 
-    <!-- FOOTER -->
+    <section class="gjs-section" id="form-section-case">
+      <div class="gjs-container" id="form-container-case">
+        <table id="form-table-case">
+          <tbody id="form-tablebody-case">
+            <tr id="row-code-case">
+              <td id="label-cell-code-case">
+                <div id="label-wrap-code-case">
+                  <b id="label-code-case">Código funda</b>
+                </div>
+              </td>
+              <td id="input-cell-code-case">
+                <input type="text" id="input-code-case" />
+              </td>
+            </tr>
+
+            <tr id="row-name-case">
+              <td id="label-cell-name-case">
+                <div id="label-wrap-name-case">
+                  <b id="label-name-case">Nombre</b>
+                </div>
+              </td>
+              <td id="input-cell-name-case">
+                <input type="text" id="input-name-case" />
+              </td>
+            </tr>
+
+            <tr id="row-price-case">
+              <td id="label-cell-price-case">
+                <div id="label-wrap-price-case">
+                  <b id="label-price-case">Precio</b>
+                </div>
+              </td>
+              <td id="input-cell-price-case">
+                <input type="text" id="input-price-case" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div data-type-role="flex-row" class="gjs-plg-flex-row" id="form-actions-case">
+          <div data-type-role="flex-column" class="gjs-plg-flex-column" id="form-actions-left-case"></div>
+          <div data-type-role="flex-column" class="gjs-plg-flex-column" id="form-actions-right-case">
+            <button type="button" id="btn-add-case">Agregar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <div id="footer-row" class="gjs-grid-row">
       <div id="footer-col" class="gjs-grid-column">
         <div id="footer-copyright" class="gjs-text-blue">Copyright © 2025 Pentacord Company</div>
       </div>
     </div>
-
-    <!-- SCRIPTS -->
-    <script src="/script.js"></script>
-    <script>
-      // Manejar mostrar/ocultar sección de funda con checkbox
-      const tieneFundaCheckbox = document.getElementById('tieneFunda');
-      const fundaSection = document.getElementById('form-container-case');
-
-      if (tieneFundaCheckbox && fundaSection) {
-        tieneFundaCheckbox.addEventListener('change', function() {
-          if (this.checked) {
-            fundaSection.style.display = 'block';
-          } else {
-            fundaSection.style.display = 'none';
-          }
-        });
-      }
-    </script>
   </body>
+
 </html>
