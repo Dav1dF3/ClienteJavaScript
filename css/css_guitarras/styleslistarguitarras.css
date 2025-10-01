@@ -1,89 +1,34 @@
-.gjs-heading {
-  margin: 0;
-  color: rgba(29, 40, 55, 1);
+/* styleslistarguitarras.css — estilos page-specific para Listar Guitarras
+   Complementa main.css (no duplica reglas globales). */
+
+/* Page container / background (page-specific) */
+#page-inventory-guitars {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(180deg, rgba(59, 130, 245, 0.11), white 14%);
+  color: #475569;
 }
 
-.gjs-grid-column {
-  flex: 1 1 0%;
-  padding: 5px 0;
+/* Hero / page heading */
+#hero-row {
+  justify-content: center;
+  padding: 50px 20px;
 }
 
-.gjs-grid-row {
-  display: flex;
-  justify-content: flex-start;
-  align-items: stretch;
-  flex-direction: row;
-  min-height: auto;
-  padding: 10px 0;
-}
-
-.gjs-link-box {
-  color: inherit;
-  display: inline-block;
-  vertical-align: top;
-  padding: 10px;
-  max-width: 100%;
-  text-decoration: none;
-}
-
-.gjs-link {
-  vertical-align: top;
-  max-width: 100%;
-  display: inline-block;
-  text-decoration: none;
-  color: inherit;
-  transition: color 0.3s ease 0s;
-}
-
-.gjs-grid-column.feature-item {
-  padding-top: 15px;
-  padding-right: 15px;
-  padding-bottom: 15px;
-  padding-left: 15px;
+#hero-col {
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  min-width: 30%;
+  gap: 10px;
+  align-items: center;
 }
 
-.gjs-grid-column.testimonial-item {
-  padding-top: 15px;
-  padding-right: 15px;
-  padding-bottom: 15px;
-  padding-left: 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  min-width: 45%;
-  background-color: rgba(247, 247, 247, 0.23);
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  align-items: flex-start;
-  border-top-width: 1px;
-  border-right-width: 1px;
-  border-bottom-width: 1px;
-  border-left-width: 1px;
-  border-top-style: solid;
-  border-right-style: solid;
-  border-bottom-style: solid;
-  border-left-style: solid;
-  border-top-color: rgba(0, 0, 0, 0.06);
-  border-right-color: rgba(0, 0, 0, 0.06);
-  border-bottom-color: rgba(0, 0, 0, 0.06);
-  border-left-color: rgba(0, 0, 0, 0.06);
-}
-
-.gjs-text-blue {
+#hero-title {
+  font-size: 2.8rem;
+  text-align: center;
   color: rgb(36, 99, 235);
 }
 
-.gjs-link:hover {
-  color: rgb(36, 99, 235);
-  text-decoration: underline;
-}
-
+/* Container / section helpers (page-specific) */
 .gjs-container {
   width: 90%;
   margin: 0 auto;
@@ -92,150 +37,61 @@
 
 .gjs-section {
   display: flex;
-  padding: 50px 0;
+  padding: 30px 0;
 }
 
-.tabla-contenedor {
+/* Tabla container + scroll (kebab ids) */
+#tabla-container-guitars {
   display: flex;
   justify-content: center;
   margin: 20px auto;
   width: 100%;
 }
 
-.tabla-scroll {
-  width: 100%;
-  max-height: 400px;
-  overflow-y: auto;
-}
-
-#iliqm-2 {
-  padding: 10px;
-  font-family: Impact, Charcoal, sans-serif;
-  color: rgb(36, 99, 235);
-}
-
-#iucmr-3-2 {
-  display: block;
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-
-#iqjl-3-2 {
-  flex: 0 1 auto;
-}
-
-#icfyb-3-3 {
-  padding: 10px;
-  font-family: Arial, Helvetica, sans-serif;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-#infmy1-3-2 {
-  padding: 10px;
-  font-family: Arial, Helvetica, sans-serif;
-  padding-left: 20px;
-  padding-right: 20px;
-  color: inherit;
-}
-
-#irtfd-3-2 {
-  flex: 0 1 auto;
-}
-
-#i88iz-3-2 {
-  padding: 10px;
-  font-family: Arial, Helvetica, sans-serif;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-#icyzp-3-2 {
-  flex: 0 1 auto;
-}
-
-#it00l-3-2 {
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-
-#iffs-3-2 {
-  flex: 0 1 auto;
-}
-
-#iyd2-3-2 {
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  backdrop-filter: blur(13px);
-  box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.14);
-}
-
-#itjq-3-2 {
+#tabla-scroll-guitars {
   width: 100%;
   max-width: 1200px;
+  overflow-x: auto;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+  background: #fff;
 }
 
-#i6po-3-2 {
-  justify-content: center;
-  position: sticky;
-  top: 15px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-#irjua-3-2 {
-  font-size: 3rem;
-  text-align: center;
-  color: rgb(36, 99, 235);
-}
-
-#iycz3-3-2 {
-  max-width: 1200px;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-#irz7b-3-2 {
-  justify-content: center;
-  padding-top: 50px;
-  padding-bottom: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-#miTabla-4 {
+/* Tabla principal */
+#table-guitars {
   width: 100%;
   border-collapse: collapse;
   text-align: center;
   table-layout: fixed;
+  min-width: 800px; /* fuerza scroll horizontal en pantallas pequeñas */
 }
 
-#it6g1v-3-2 {
+/* Sticky header styling for the guitars table */
+#table-guitars thead th {
+  position: sticky;
+  top: 0;
+  background: rgb(36, 99, 235);
+  color: #fff;
   padding: 10px;
-  text-align: center;
-  font-size: 0.8rem;
-  margin-top: 20px;
-  opacity: 75%;
+  text-align: left;
 }
 
-#ilriti-3-2 {
-  max-width: 1200px;
-  display: flex;
-  flex-direction: column;
+/* Table cells */
+#table-guitars td,
+#table-guitars th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  vertical-align: middle;
+  word-break: break-word;
 }
 
-#iv3be5-3-2 {
+/* tbody placeholder */
+#tbody-guitars {
+  /* filas inyectadas por JS */
+}
+
+/* Footer spacing (page-specific override) */
+#footer-row {
   justify-content: center;
   padding-top: 150px;
   padding-left: 20px;
@@ -244,55 +100,43 @@
   min-height: 289px;
 }
 
-#iau9-3-2 {
-  font-family: Arial, Helvetica, sans-serif;
-  background-image: linear-gradient(180deg, rgba(59, 130, 245, 0.11), white 14%);
-  background-position: 0px 0px;
-  background-size: 100% 100%;
-  background-repeat: repeat;
-  background-attachment: scroll;
-  background-origin: padding-box;
-  color: #475569;
-}
-
-#icfyb-3-2-2 {
+/* Copyright small text */
+#footer-copyright {
   padding: 10px;
-  font-family: Arial, Helvetica, sans-serif;
-  padding-left: 20px;
-  padding-right: 20px;
-  color: rgb(36, 99, 235);
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 20px;
+  opacity: 0.75;
 }
 
-#miTabla-4 thead th {
-  position: sticky;
-  top: 0;
-  background: rgb(36, 99, 235);
-  color: #fff;
-  padding: 10px;
+/* Small UX: highlight row on hover */
+#table-guitars tbody tr:hover {
+  background: rgba(36,99,235,0.04);
 }
 
-#miTabla-4 td,
-#miTabla-4 th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
+/* Mobile / responsive tweaks */
 @media (max-width: 992px) {
-  .gjs-grid-row {
-    flex-direction: column;
+  /* allow layout stacking from main.css but adjust table min-width */
+  #table-guitars {
+    min-width: 700px;
   }
 
-  #it00l-3-2 {
-    flex-direction: row;
-  }
-
-  #iyd2-3-2 {
-    flex-direction: row;
+  #hero-title {
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 768px) {
-  #iffs-3-2 {
-    display: none;
+  #table-guitars {
+    min-width: 600px;
   }
+
+  #tabla-container-guitars {
+    padding: 12px;
+  }
+}
+
+/* Small visual polish for header shadow kept page-specific */
+#header-inner-row {
+  box-shadow: 0 2px 7px rgba(0,0,0,0.14);
 }
