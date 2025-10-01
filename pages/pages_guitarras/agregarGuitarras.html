@@ -1,6 +1,5 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
-
   <head>
     <title>Instrumentos - Agregar Guitarra</title>
     <meta charset="utf-8" />
@@ -40,7 +39,7 @@
       </div>
     </div>
 
-    <!-- radios ocultos (deben ir ANTES de las sections y como hijos directos de body) -->
+    <!-- radios ocultos -->
     <input type="radio" name="funda" id="funda-si" value="si" hidden>
     <input type="radio" name="funda" id="funda-no" value="no" checked hidden>
 
@@ -103,24 +102,6 @@
               </td>
             </tr>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <tr id="row-date-guitar">
-              <td id="label-cell-date-guitar">
-                <div id="label-wrap-date-guitar">
-                  <b id="label-date-guitar">Fecha de creación</b>
-                </div>
-              </td>
-              <td id="input-cell-date-guitar">
-                <input type="text" id="input-date-guitar" />
-              </td>
-            </tr>
-
-=======
-            <!-- Tipo -->
->>>>>>> 28ea54ccc7126edaca1c4310992af6c4c5b50284
-=======
->>>>>>> parent of b914922 (Creacion de script y actualizacion de agregarGuitarra)
             <tr id="row-type-guitar">
               <td id="label-cell-type-guitar">
                 <div id="label-wrap-type-guitar">
@@ -159,49 +140,19 @@
               <td id="input-cell-case-guitar">
                 <div data-type-role="flex-row" id="case-choice-row" class="gjs-plg-flex-row">
                   <div data-type-role="flex-column" id="case-choice-col-yes" class="gjs-plg-flex-column">
-                    <div data-type-role="flex-row" id="case-choice-inner-yes" class="gjs-plg-flex-row">
-                      <div data-type-role="flex-column" id="case-choice-col-yes-inner" class="gjs-plg-flex-column">
-                        <label for="funda-si" id="label-funda-si">
-                          <b id="label-case-yes">Si</b>
-                        </label>
-                      </div>
-                    </div>
+                    <label for="funda-si" id="label-funda-si"><b>Si</b></label>
                   </div>
-
                   <div data-type-role="flex-column" id="case-choice-col-no" class="gjs-plg-flex-column">
-                    <div data-type-role="flex-row" id="case-choice-inner-no" class="gjs-plg-flex-row">
-                      <div data-type-role="flex-column" id="case-choice-col-no-inner" class="gjs-plg-flex-column">
-                        <label for="funda-no" id="label-funda-no">
-                          <b id="label-case-no">No</b>
-                        </label>
-                      </div>
-                    </div>
+                    <label for="funda-no" id="label-funda-no"><b>No</b></label>
                   </div>
-
                 </div>
               </td>
             </tr>
-          </tbody>
-        </table>
 
-        <div data-type-role="flex-row" id="form-actions-guitar" class="gjs-plg-flex-row">
-          <div data-type-role="flex-column" id="form-actions-left-guitar" class="gjs-plg-flex-column"></div>
-          <div data-type-role="flex-column" id="form-actions-right-guitar" class="gjs-plg-flex-column">
-            <button type="button" id="btn-add-guitar">Agregar</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="gjs-section" id="form-section-case">
-      <div class="gjs-container" id="form-container-case">
-        <table id="form-table-case">
-          <tbody id="form-tablebody-case">
+            <!-- CAMPOS DE LA FUNDA EMBEBIDOS AQUÍ -->
             <tr id="row-code-case">
               <td id="label-cell-code-case">
-                <div id="label-wrap-code-case">
-                  <b id="label-code-case">Código funda</b>
-                </div>
+                <div id="label-wrap-code-case"><b>Código funda</b></div>
               </td>
               <td id="input-cell-code-case">
                 <input type="text" id="input-code-case" />
@@ -210,9 +161,7 @@
 
             <tr id="row-name-case">
               <td id="label-cell-name-case">
-                <div id="label-wrap-name-case">
-                  <b id="label-name-case">Nombre</b>
-                </div>
+                <div id="label-wrap-name-case"><b>Nombre funda</b></div>
               </td>
               <td id="input-cell-name-case">
                 <input type="text" id="input-name-case" />
@@ -221,9 +170,7 @@
 
             <tr id="row-price-case">
               <td id="label-cell-price-case">
-                <div id="label-wrap-price-case">
-                  <b id="label-price-case">Precio</b>
-                </div>
+                <div id="label-wrap-price-case"><b>Precio funda</b></div>
               </td>
               <td id="input-cell-price-case">
                 <input type="text" id="input-price-case" />
@@ -232,10 +179,11 @@
           </tbody>
         </table>
 
-        <div data-type-role="flex-row" class="gjs-plg-flex-row" id="form-actions-case">
-          <div data-type-role="flex-column" class="gjs-plg-flex-column" id="form-actions-left-case"></div>
-          <div data-type-role="flex-column" class="gjs-plg-flex-column" id="form-actions-right-case">
-            <button type="button" id="btn-add-case">Agregar</button>
+        <!-- ACCIONES -->
+        <div data-type-role="flex-row" id="form-actions-guitar" class="gjs-plg-flex-row">
+          <div data-type-role="flex-column" id="form-actions-left-guitar" class="gjs-plg-flex-column"></div>
+          <div data-type-role="flex-column" id="form-actions-right-guitar" class="gjs-plg-flex-column">
+            <button type="button" id="btn-add-guitar">Agregar</button>
           </div>
         </div>
       </div>
@@ -247,5 +195,4 @@
       </div>
     </div>
   </body>
-
 </html>
