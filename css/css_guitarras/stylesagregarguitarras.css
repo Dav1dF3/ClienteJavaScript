@@ -1,653 +1,232 @@
-.gjs-heading {
-  margin: 0;
-  color: rgba(29, 40, 55, 1);
+/* stylesagregarguitarras.css — page-specific, high-specificity for page-add-guitar */
+
+/* Scope everything to the page root to avoid conflicts */
+#page-add-guitar {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(180deg, rgba(59,130,245,0.11), white 14%);
+  color: #475569;
+  box-sizing: border-box;
 }
 
-.gjs-grid-column {
-  flex: 1 1 0%;
-  padding: 5px 0;
+/* Hero */
+#page-add-guitar #hero-row {
+  justify-content: center;
+  padding: 50px 20px;
 }
-
-.gjs-grid-row {
-  display: flex;
-  justify-content: flex-start;
-  align-items: stretch;
-  flex-direction: row;
-  min-height: auto;
-  padding: 10px 0;
-}
-
-.gjs-link-box {
-  color: inherit;
-  display: inline-block;
-  vertical-align: top;
-  padding: 10px;
-  max-width: 100%;
-  text-decoration: none;
-}
-
-.gjs-link {
-  vertical-align: top;
-  max-width: 100%;
-  display: inline-block;
-  text-decoration: none;
-  color: inherit;
-  transition: color 0.3s ease 0s;
-}
-
-.gjs-grid-column.feature-item {
-  padding-top: 15px;
-  padding-right: 15px;
-  padding-bottom: 15px;
-  padding-left: 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  min-width: 30%;
-}
-
-.gjs-grid-column.testimonial-item {
-  padding-top: 15px;
-  padding-right: 15px;
-  padding-bottom: 15px;
-  padding-left: 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  min-width: 45%;
-  background-color: rgba(247, 247, 247, 0.23);
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  align-items: flex-start;
-  border-top-width: 1px;
-  border-right-width: 1px;
-  border-bottom-width: 1px;
-  border-left-width: 1px;
-  border-top-style: solid;
-  border-right-style: solid;
-  border-bottom-style: solid;
-  border-left-style: solid;
-  border-top-color: rgba(0, 0, 0, 0.06);
-  border-right-color: rgba(0, 0, 0, 0.06);
-  border-bottom-color: rgba(0, 0, 0, 0.06);
-  border-left-color: rgba(0, 0, 0, 0.06);
-}
-
-.gjs-text-blue {
-  color: rgb(36, 99, 235);
-}
-
-.gjs-link:hover {
-  color: rgb(36, 99, 235);
-  text-decoration: underline;
-}
-
-.gjs-container {
-  width: 90%;
-  margin: 0 auto;
+#page-add-guitar #hero-col {
   max-width: 1200px;
-}
-
-.gjs-section {
   display: flex;
-  padding: 50px 0;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+#page-add-guitar #hero-title {
+  font-size: 2.8rem;
+  text-align: center;
+  color: rgb(36,99,235);
 }
 
-.gjs-plg-flex-column {
+/* Form sections */
+#page-add-guitar #form-section-guitar {
+  padding: 50px 150px;
+}
+#page-add-guitar #form-section-case {
+  padding: 0 150px;
+  display: none; /* hidden by default; shown when radio checked */
+  transition: opacity 180ms ease;
+}
+
+/* Table/form containers */
+#page-add-guitar #form-table-guitar,
+#page-add-guitar #form-table-case {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Label wrappers spacing */
+#page-add-guitar #label-wrap-code-guitar,
+#page-add-guitar #label-wrap-name-guitar,
+#page-add-guitar #label-wrap-brand-guitar,
+#page-add-guitar #label-wrap-price-guitar,
+#page-add-guitar #label-wrap-stock-guitar,
+#page-add-guitar #label-wrap-type-guitar,
+#page-add-guitar #label-wrap-material-guitar,
+#page-add-guitar #label-wrap-case-guitar,
+#page-add-guitar #label-wrap-code-case,
+#page-add-guitar #label-wrap-name-case,
+#page-add-guitar #label-wrap-price-case {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Inputs / select styling (guitar form) */
+#page-add-guitar #input-code-guitar,
+#page-add-guitar #input-name-guitar,
+#page-add-guitar #input-brand-guitar,
+#page-add-guitar #input-price-guitar,
+#page-add-guitar #input-stock-guitar,
+#page-add-guitar #select-type-guitar,
+#page-add-guitar #input-material-guitar,
+#page-add-guitar #input-code-case,
+#page-add-guitar #input-name-case,
+#page-add-guitar #input-price-case {
+  width: 100%;
+  border-radius: 15px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(36,99,235);
+  padding: 8px 10px;
+  box-sizing: border-box;
+  background: #fff;
+  color: #0f172a;
+}
+
+/* Buttons */
+#page-add-guitar #btn-add-guitar,
+#page-add-guitar #btn-add-case {
+  width: 100%;
+  height: 34px;
+  border-radius: 15px;
+  background-color: rgb(36,99,235);
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+/* Action columns sizing */
+#page-add-guitar #form-actions-left-guitar { flex-basis: 75%; }
+#page-add-guitar #form-actions-right-guitar { flex-basis: 25%; }
+#page-add-guitar #form-actions-left-case { flex-basis: 75%; }
+#page-add-guitar #form-actions-right-case { flex-basis: 25%; }
+
+/* Plugin helper classes kept scoped */
+#page-add-guitar .gjs-plg-flex-column {
   display: flex;
   flex-direction: column;
   align-items: center;
-  undefined: undefined;
   justify-content: center;
   text-align: center;
   gap: 10px;
 }
-
-.gjs-plg-flex-row {
+#page-add-guitar .gjs-plg-flex-row {
   display: flex;
   align-items: stretch;
   flex-wrap: nowrap;
 }
 
-#i4hjm-2-2 {
-  padding: 10px;
-  font-family: Impact, Charcoal, sans-serif;
-  color: rgb(36, 99, 235);
-}
-
-#iucmr-2-2-2 {
-  display: block;
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-
-#iqjl-2-2-2 {
-  flex: 0 1 auto;
-}
-
-#icfyb-2-3-2 {
-  padding: 10px;
-  font-family: Arial, Helvetica, sans-serif;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-#icfyb-2-2-2-2 {
-  padding: 10px;
-  font-family: Arial, Helvetica, sans-serif;
-  padding-left: 20px;
-  padding-right: 20px;
-  color: rgb(36, 99, 235);
-}
-
-#infmy1-2-2-2 {
-  padding: 10px;
-  font-family: Arial, Helvetica, sans-serif;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-#irtfd-2-2-2 {
-  flex: 0 1 auto;
-}
-
-#i88iz-2-2-2 {
-  padding: 10px;
-  font-family: Arial, Helvetica, sans-serif;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-#icyzp-2-2-2 {
-  flex: 0 1 auto;
-}
-
-#it00l-2-2-2 {
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-
-#iffs-2-2-2 {
-  flex: 0 1 auto;
-}
-
-#iyd2-2-2-2 {
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  backdrop-filter: blur(13px);
-  box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.14);
-}
-
-#itjq-2-2-2 {
+/* Case choice row layout */
+#page-add-guitar #case-choice-row {
   width: 100%;
-  max-width: 1200px;
-}
-
-#i6po-2-2-2 {
-  justify-content: center;
-  position: sticky;
-  top: 15px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-#irjua-2-2-2 {
-  font-size: 3rem;
-  text-align: center;
-  color: rgb(36, 99, 235);
-}
-
-#iycz3-2-2-2 {
-  max-width: 1200px;
-  align-items: center;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-#irz7b-2-2-2 {
-  justify-content: center;
-  padding-top: 80px;
-  padding-bottom: 80px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-#it6g1v-2-2-2 {
-  padding: 10px;
-  text-align: center;
-  font-size: 0.8rem;
-  margin-top: 20px;
-  opacity: 75%;
-}
-
-#ilriti-2-2-2 {
-  max-width: 1200px;
-  display: flex;
-  flex-direction: column;
-}
-
-#iv3be5-2-2-2 {
-  justify-content: center;
-  padding-top: 80px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 80px;
-  min-height: 162px;
-}
-
-#iau9-2-2-2 {
-  font-family: Arial, Helvetica, sans-serif;
-  background-image: linear-gradient(180deg, rgba(59, 130, 245, 0.11), white 14%);
-  background-position: 0px 0px;
-  background-size: 100% 100%;
-  background-repeat: repeat;
-  background-attachment: scroll;
-  background-origin: padding-box;
-  color: #475569;
-}
-
-.gjs-plg-flex-column {
-  display: flex;
-  flex-direction: column;
+  gap: 12px;
   align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+#page-add-guitar #case-choice-col-yes,
+#page-add-guitar #case-choice-col-no {
+  flex-basis: 50%;
+  display: flex;
   justify-content: center;
-  text-align: center;
-  gap: 10px;
 }
 
-#miTabla-4 thead th {
-  position: sticky;
-  top: 0;
-  background: rgb(36, 99, 235);
-  color: #fff;
-  padding: 10px;
-}
-
-#miTabla-4 td,
-#miTabla-4 th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#ie9q2d7 {
-  padding-top: 50px;
-  padding-right: 150px;
-  padding-bottom: 50px;
-  padding-left: 150px;
-  margin-top: 0px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-}
-
-#iqnj9da {
-  width: 100%;
-}
-
-#iics8yg {
-  padding: 10px;
-}
-
-#ix8kez6 {
-  padding: 10px;
-}
-
-#ilw15ba {
-  padding: 10px;
-}
-
-#it5oyyf {
-  padding: 10px;
-}
-
-#iv6z0eb {
-  width: 100%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border-top-color: rgb(36, 99, 235);
-  border-right-color: rgb(36, 99, 235);
-  border-bottom-color: rgb(36, 99, 235);
-  border-left-color: rgb(36, 99, 235);
-}
-
-#itooyh7 {
-  width: 100%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border-top-color: rgb(36, 99, 235);
-  border-right-color: rgb(36, 99, 235);
-  border-bottom-color: rgb(36, 99, 235);
-  border-left-color: rgb(36, 99, 235);
-}
-
-#igk6al6 {
-  width: 100%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border-top-color: rgb(36, 99, 235);
-  border-right-color: rgb(36, 99, 235);
-  border-bottom-color: rgb(36, 99, 235);
-  border-left-color: rgb(36, 99, 235);
-}
-
-#i5alvcd {
-  width: 100%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border-top-color: rgb(36, 99, 235);
-  border-right-color: rgb(36, 99, 235);
-  border-bottom-color: rgb(36, 99, 235);
-  border-left-color: rgb(36, 99, 235);
-}
-
-#ie0kk3z {
-  flex-basis: 75%;
-}
-
-#i5sb9zi {
-  flex-basis: 25%;
-}
-
-#iqisg9q {
-  width: 100%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: rgb(36, 99, 235);
-  color: rgba(255, 255, 255, 1);
-  cursor: pointer;
-  border-top-color: rgb(36, 99, 235);
-  border-right-color: rgb(36, 99, 235);
-  border-bottom-color: rgb(36, 99, 235);
-  border-left-color: rgb(36, 99, 235);
-  height: 30px;
-}
-
-#irmhg2v {
-  padding-left: 150px;
-  padding-right: 150px;
-}
-
-#iics8yg-2 {
-  padding: 10px;
-}
-
-#iv6z0eb-2 {
-  width: 100%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border-top-color: rgb(36, 99, 235);
-  border-right-color: rgb(36, 99, 235);
-  border-bottom-color: rgb(36, 99, 235);
-  border-left-color: rgb(36, 99, 235);
-}
-
-#ix8kez6-2 {
-  padding: 10px;
-}
-
-#itooyh7-2 {
-  width: 100%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border-top-color: rgb(36, 99, 235);
-  border-right-color: rgb(36, 99, 235);
-  border-bottom-color: rgb(36, 99, 235);
-  border-left-color: rgb(36, 99, 235);
-}
-
-#ilw15ba-2 {
-  padding: 10px;
-}
-
-#igk6al6-2 {
-  width: 100%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border-top-color: rgb(36, 99, 235);
-  border-right-color: rgb(36, 99, 235);
-  border-bottom-color: rgb(36, 99, 235);
-  border-left-color: rgb(36, 99, 235);
-}
-
-#it5oyyf-2 {
-  padding: 10px;
-}
-
-#i5alvcd-2 {
-  width: 100%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border-top-color: rgb(36, 99, 235);
-  border-right-color: rgb(36, 99, 235);
-  border-bottom-color: rgb(36, 99, 235);
-  border-left-color: rgb(36, 99, 235);
-}
-
-#ii7tjyo-2 {
-  padding: 10px;
-}
-
-#ip0r8zo-2 {
-  width: 100%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border-top-color: rgb(36, 99, 235);
-  border-right-color: rgb(36, 99, 235);
-  border-bottom-color: rgb(36, 99, 235);
-  border-left-color: rgb(36, 99, 235);
-}
-
-#i72qbrp-2 {
-  padding: 10px;
-}
-
-#ive1uvc {
-  width: 100%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border-top-width: 2px;
-  border-right-width: 2px;
-  border-bottom-width: 2px;
-  border-left-width: 2px;
-  border-top-color: rgb(36, 99, 235);
-  border-right-color: rgb(36, 99, 235);
-  border-bottom-color: rgb(36, 99, 235);
-  border-left-color: rgb(36, 99, 235);
-}
-
-#iuqlp6y-2 {
-  padding: 10px;
-}
-
-#itaw5zg-2 {
-  width: 100%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border-top-color: rgb(36, 99, 235);
-  border-right-color: rgb(36, 99, 235);
-  border-bottom-color: rgb(36, 99, 235);
-  border-left-color: rgb(36, 99, 235);
-}
-
-#ilo8r8k-2 {
-  text-align: left;
-}
-
-#ipwamy9-2 {
-  padding: 10px;
-}
-
-#i5q5d35-2 {
-  position: relative;
-  left: 70px;
-}
-
-#in027py-2 {
-  flex-basis: 50%;
-}
-
-#iwd7pyu-2 {
-  padding: 10px;
-}
-
-#ixruw3k-2 {
-  flex-basis: 50%;
-}
-
-#i8vgc8v-2 {
-  width: 100%;
-}
-
-#iziyac9-2 {
-  flex-basis: 50%;
-}
-
-#i5vtiko-2 {
-  position: relative;
-  left: 70px;
-}
-
-#iwwc6pj-2 {
-  flex-basis: 50%;
-}
-
-#i47uzp5-2 {
-  padding: 10px;
-}
-
-#iujjaj3-2 {
-  flex-basis: 50%;
-}
-
-#ieoy9ah-2 {
-  width: 100%;
-}
-
-#isznxzd-2 {
-  flex-basis: 50%;
-}
-
-#iu2ytql-2 {
-  width: 100%;
-}
-
-#iqnj9da-2 {
-  width: 100%;
-}
-
-#ivcm2vz {
-  flex-basis: 75%;
-}
-
-#ivvdwfr {
-  flex-basis: 25%;
-}
-
-#iqisg9q-2 {
-  width: 100%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: rgb(36, 99, 235);
-  color: rgba(255, 255, 255, 1);
-  cursor: pointer;
-  border-top-color: rgb(36, 99, 235);
-  border-right-color: rgb(36, 99, 235);
-  border-bottom-color: rgb(36, 99, 235);
-  border-left-color: rgb(36, 99, 235);
-  height: 30px;
-}
-
-@media (max-width: 992px) {
-  .gjs-grid-row {
-    flex-direction: column;
-  }
-
-  #it00l-2-2-2 {
-    flex-direction: row;
-  }
-
-  #iyd2-2-2-2 {
-    flex-direction: row;
-  }
-}
-
-@media (max-width: 768px) {
-  #iffs-2-2-2 {
-    display: none;
-  }
-}
-
-/* --- Mostrar/ocultar sección de la funda sin JS --- */
-/* por defecto la sección está oculta */
-#irmhg2v {
-  display: none;
-  transition: opacity 180ms ease;
-  opacity: 1;
-}
-
-/* Si se selecciona "si" (radio oculto anterior a las sections), mostrar la sección.
-   Esta regla asume que los radios ocultos están ANTES de las <section> en el DOM. */
-#funda_si:checked ~ #ie9q2d7 ~ #irmhg2v,
-#funda_si:checked ~ #irmhg2v {
-  display: block;
-}
-
-/* Estilos sencillos para las etiquetas que actúan como radios visibles */
-label[for="funda_si"],
-label[for="funda_no"] {
+/* Labels that act as radio buttons — visuals (scoped) */
+#page-add-guitar label[for="funda-si"],
+#page-add-guitar label[for="funda-no"],
+#page-add-guitar #label-funda-si,
+#page-add-guitar #label-funda-no {
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 6px;
   user-select: none;
-  padding: 4px 8px;
+  padding: 6px 10px;
   border-radius: 6px;
   border: 1px solid transparent;
-  transition: background .12s ease, border-color .12s ease;
+  transition: background 120ms ease, border-color 120ms ease, color 120ms ease;
 }
 
-/* Resaltar la etiqueta que corresponde a la opción seleccionada */
-#funda_si:checked ~ #ie9q2d7 label[for="funda_si"],
-#funda_no:checked ~ #ie9q2d7 label[for="funda_no"] {
+/* Show case section when 'si' radio is checked (scoped) */
+/* radios are children of body inside this page, so we use sibling combinators */
+#page-add-guitar #funda-si:checked ~ #form-section-case,
+#page-add-guitar #funda-si:checked ~ #form-section-guitar ~ #form-section-case {
+  display: block;
+}
+
+/* Highlight selected label(s) (scoped variant to reach labels inside sections) */
+#page-add-guitar #funda-si:checked ~ #form-section-guitar label[for="funda-si"],
+#page-add-guitar #funda-no:checked ~ #form-section-guitar label[for="funda-no"],
+#page-add-guitar #funda-si:checked ~ #form-section-case label[for="funda-si"],
+#page-add-guitar #funda-no:checked ~ #form-section-case label[for="funda-no"] {
   background: rgba(36,99,235,0.08);
   border-color: rgba(36,99,235,0.18);
   color: rgb(36,99,235);
+}
+
+/* Inputs: accessibility polish */
+#page-add-guitar #input-code-guitar:focus,
+#page-add-guitar #input-name-guitar:focus,
+#page-add-guitar #input-brand-guitar:focus,
+#page-add-guitar #input-price-guitar:focus,
+#page-add-guitar #input-stock-guitar:focus,
+#page-add-guitar #select-type-guitar:focus,
+#page-add-guitar #input-material-guitar:focus {
+  outline: 3px solid rgba(36,99,235,0.12);
+  outline-offset: 2px;
+}
+
+/* Small polish: stacked layout for case form inputs too */
+#page-add-guitar #form-table-case td,
+#page-add-guitar #form-table-guitar td {
+  vertical-align: top;
+  padding: 6px 8px;
+}
+
+/* Header shadow limited to page scope */
+#page-add-guitar #header-inner-row {
+  box-shadow: 0 2px 7px rgba(0,0,0,0.14);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  #page-add-guitar #form-section-guitar,
+  #page-add-guitar #form-section-case {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  #page-add-guitar #hero-title {
+    font-size: 2.2rem;
+  }
+
+  /* action columns stack on small screens */
+  #page-add-guitar #form-actions-left-guitar,
+  #page-add-guitar #form-actions-right-guitar,
+  #page-add-guitar #form-actions-left-case,
+  #page-add-guitar #form-actions-right-case {
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  #page-add-guitar #case-choice-row {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  #page-add-guitar #form-section-guitar,
+  #page-add-guitar #form-section-case {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  #page-add-guitar #btn-add-guitar,
+  #page-add-guitar #btn-add-case {
+    font-size: 14px;
+    height: 36px;
+  }
 }
