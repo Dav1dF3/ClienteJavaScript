@@ -46,6 +46,7 @@
 #page-add-keyboard #label-wrap-brand-keyboard,
 #page-add-keyboard #label-wrap-price-keyboard,
 #page-add-keyboard #label-wrap-stock-keyboard,
+#page-add-keyboard #label-wrap-date-keyboard,
 #page-add-keyboard #label-wrap-keys-keyboard,
 #page-add-keyboard #label-wrap-digital-keyboard,
 #page-add-keyboard #label-wrap-sensitivity-keyboard {
@@ -59,6 +60,7 @@
 #page-add-keyboard #input-brand-keyboard,
 #page-add-keyboard #input-price-keyboard,
 #page-add-keyboard #input-stock-keyboard,
+#page-add-keyboard #input-date-keyboard,
 #page-add-keyboard #input-keys-keyboard,
 #page-add-keyboard #select-sensitivity-keyboard,
 #page-add-keyboard #input-code-case,
@@ -154,9 +156,10 @@
 #page-add-keyboard #input-brand-keyboard:focus,
 #page-add-keyboard #input-price-keyboard:focus,
 #page-add-keyboard #input-stock-keyboard:focus,
+#page-add-keyboard #input-date-keyboard:focus,
 #page-add-keyboard #input-keys-keyboard:focus,
 #page-add-keyboard #select-sensitivity-keyboard:focus,
-#page-add-keyboard #input-material-keyboard:focus {
+#page-add-keyboard #input-material-keyboard:focus{
   outline: 3px solid rgba(36,99,235,0.12);
   outline-offset: 2px;
 }
