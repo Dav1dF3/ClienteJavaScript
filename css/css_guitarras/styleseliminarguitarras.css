@@ -1,254 +1,501 @@
-/* styleseliminarguitarras.css — page-specific for Eliminar Guitarra
-   Reemplaza al anterior. Scoped under #page-delete-guitar.
-*/
-
-#page-delete-guitar {
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-  background-image: linear-gradient(180deg, rgba(59, 130, 245, 0.11), white 14%);
-  color: #475569;
+.gjs-heading {
+  margin: 0;
+  color: rgba(29, 40, 55, 1);
 }
 
-/* Header */
-#page-delete-guitar #navbar-wrapper {
-  justify-content: center;
-  position: sticky;
-  top: 15px;
-  left: 0;
-  right: 0;
-  z-index: 9999;
-  padding: 0 20px;
-  background: transparent;
+.gjs-grid-column {
+  flex: 1 1 0%;
+  padding: 5px 0;
 }
-#page-delete-guitar #navbar-column { width: 100%; max-width: 1200px; }
-#page-delete-guitar #navbar-row {
+
+.gjs-grid-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-direction: row;
+  min-height: auto;
+  padding: 10px 0;
+}
+
+.gjs-link-box {
+  color: inherit;
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px;
+  max-width: 100%;
+  text-decoration: none;
+}
+
+.gjs-link {
+  vertical-align: top;
+  max-width: 100%;
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease 0s;
+}
+
+.gjs-grid-column.feature-item {
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 30%;
+}
+
+.gjs-grid-column.testimonial-item {
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 45%;
+  background-color: rgba(247, 247, 247, 0.23);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  align-items: flex-start;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-top-color: rgba(0, 0, 0, 0.06);
+  border-right-color: rgba(0, 0, 0, 0.06);
+  border-bottom-color: rgba(0, 0, 0, 0.06);
+  border-left-color: rgba(0, 0, 0, 0.06);
+}
+
+.gjs-text-blue {
+  color: rgb(36, 99, 235);
+}
+
+.gjs-link:hover {
+  color: rgb(36, 99, 235);
+  text-decoration: underline;
+}
+
+.gjs-container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.gjs-section {
+  display: flex;
+  padding: 50px 0;
+}
+
+.gjs-plg-flex-column {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 0;
-  background-color: rgba(255,255,255,0.8);
-  border-radius: 10px;
-  backdrop-filter: blur(13px);
-  box-shadow: 0 2px 7px rgba(0,0,0,0.14);
+  undefined: undefined;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
 }
-#page-delete-guitar #navbar-logo-link { display: block; }
-#page-delete-guitar #navbar-logo-text {
+
+.gjs-plg-flex-row {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+
+.gjs-plg-flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+}
+
+#miTabla-4 thead th {
+  position: sticky;
+  top: 0;
+  background: rgb(36, 99, 235);
+  color: #fff;
+  padding: 10px;
+}
+
+#miTabla-4 td,
+#miTabla-4 th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#i4hjm-2-2-2-2 {
   padding: 10px;
   font-family: Impact, Charcoal, sans-serif;
   color: rgb(36, 99, 235);
 }
-#page-delete-guitar #navbar-links-col a,
-#page-delete-guitar #navbar-about-col a {
-  padding: 10px 20px;
-  font-family: Arial, Helvetica, sans-serif;
+
+#iucmr-2-2-2-2-2 {
+  display: block;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
-/* Page title */
-#page-delete-guitar #page-title-row { justify-content: center; padding: 50px 20px; }
-#page-delete-guitar #page-title-col {
+#iqjl-2-2-2-2-2 {
+  flex: 0 1 auto;
+}
+
+#icfyb-2-3-2-2-2 {
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#icfyb-2-2-2-2-2-2 {
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: rgb(36, 99, 235);
+}
+
+#infmy1-2-2-2-2-2 {
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#irtfd-2-2-2-2-2 {
+  flex: 0 1 auto;
+}
+
+#i88iz-2-2-2-2-2 {
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#icyzp-2-2-2-2-2 {
+  flex: 0 1 auto;
+}
+
+#it00l-2-2-2-2-2 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+#iffs-2-2-2-2-2 {
+  flex: 0 1 auto;
+}
+
+#iyd2-2-2-2-2-2 {
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  backdrop-filter: blur(13px);
+  box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.14);
+}
+
+#itjq-2-2-2-2-2 {
+  width: 100%;
   max-width: 1200px;
+}
+
+#i6po-2-2-2-2-2 {
+  justify-content: center;
+  position: sticky;
+  top: 15px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#irjua-2-2-2-2-2 {
+  font-size: 3rem;
+  text-align: center;
+  color: rgb(36, 99, 235);
+}
+
+#iycz3-2-2-2-2-2 {
+  max-width: 1200px;
+  align-items: center;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  align-items: center;
-}
-#page-delete-guitar #page-title {
-  font-size: 2.8rem;
-  text-align: center;
-  color: rgb(36, 99, 235);
-  font-weight: 700;
 }
 
-/* Main form */
-#page-delete-guitar #form-section-delete {
-  padding: 50px 150px;
-  display: flex;
+#irz7b-2-2-2-2-2 {
   justify-content: center;
-  box-sizing: border-box;
-}
-#page-delete-guitar #form-container { width: 100%; max-width: 900px; }
-
-#page-delete-guitar #form-table-delete {
-  width: 100%;
-  border-collapse: collapse;
-  table-layout: fixed;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-/* Labels & inputs */
-#page-delete-guitar tbody td > div,
-#page-delete-guitar .label-wrap {
+#iics8yg-2-3-3 {
   padding: 10px;
-  box-sizing: border-box;
-  color: #0f172a;
-  font-size: 1rem;
+}
+
+#ix8kez6-2-3-3 {
+  padding: 10px;
+}
+
+#itooyh7-2-3-3 {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-color: rgb(36, 99, 235);
+  border-right-color: rgb(36, 99, 235);
+  border-bottom-color: rgb(36, 99, 235);
+  border-left-color: rgb(36, 99, 235);
+}
+
+#ilw15ba-2-3-3 {
+  padding: 10px;
+}
+
+#igk6al6-2-3-3 {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-color: rgb(36, 99, 235);
+  border-right-color: rgb(36, 99, 235);
+  border-bottom-color: rgb(36, 99, 235);
+  border-left-color: rgb(36, 99, 235);
+}
+
+#it5oyyf-2-3-3 {
+  padding: 10px;
+}
+
+#i5alvcd-2-3-3 {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-color: rgb(36, 99, 235);
+  border-right-color: rgb(36, 99, 235);
+  border-bottom-color: rgb(36, 99, 235);
+  border-left-color: rgb(36, 99, 235);
+}
+
+#ii7tjyo-2-3-3 {
+  padding: 10px;
+}
+
+#ip0r8zo-2-3-3 {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-color: rgb(36, 99, 235);
+  border-right-color: rgb(36, 99, 235);
+  border-bottom-color: rgb(36, 99, 235);
+  border-left-color: rgb(36, 99, 235);
+}
+
+#i72qbrp-2-3-3 {
+  padding: 10px;
+}
+
+#i9lzivo {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-color: rgb(36, 99, 235);
+  border-right-color: rgb(36, 99, 235);
+  border-bottom-color: rgb(36, 99, 235);
+  border-left-color: rgb(36, 99, 235);
+}
+
+#iuqlp6y-2-3-3 {
+  padding: 10px;
+}
+
+#itaw5zg-2-3-3 {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-color: rgb(36, 99, 235);
+  border-right-color: rgb(36, 99, 235);
+  border-bottom-color: rgb(36, 99, 235);
+  border-left-color: rgb(36, 99, 235);
+}
+
+#ilo8r8k-2-3-3 {
   text-align: left;
 }
 
-#page-delete-guitar input[type="text"],
-#page-delete-guitar select {
+#ipwamy9-2-3-3 {
+  padding: 10px;
+}
+
+#iv8vgxu {
   width: 100%;
-  border-radius: 12px;
-  border: 2px solid rgb(36, 99, 235);
-  padding: 8px 10px;
-  box-sizing: border-box;
-  background: #fff;
-  color: #0f172a;
-  font-size: 1rem;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-color: rgb(36, 99, 235);
+  border-right-color: rgb(36, 99, 235);
+  border-bottom-color: rgb(36, 99, 235);
+  border-left-color: rgb(36, 99, 235);
 }
 
-#page-delete-guitar input[readonly] {
-  background: #f8fafc;
-  color: #334155;
-}
-
-/* ===== REGLAS CORREGIDAS PARA FILA DE BÚSQUEDA =====
-   Apuntan a la estructura real:
-   <td>
-     <div class="gjs-plg-flex-row">
-       <div class="gjs-plg-flex-column">  <-- input aquí
-       <div class="gjs-plg-flex-column">  <-- botón aquí
-*/
-#page-delete-guitar .gjs-plg-flex-row {
-  display: flex;             /* aseguro layout flex (main.css también lo define) */
-  align-items: center;
-  gap: 12px;                 /* separación homogénea */
+#iqnj9da-2-3-3 {
   width: 100%;
-  box-sizing: border-box;
 }
 
-/* Primera columna (input) ocupa todo el espacio restante */
-#page-delete-guitar .gjs-plg-flex-row > .gjs-plg-flex-column:first-child {
-  flex: 1 1 auto;
-  min-width: 0;              /* evita overflow */
+#ie0kk3z-3-3 {
+  flex-basis: 75%;
 }
 
-/* Segunda columna (botón) tiene ancho fijo cómodo y margen interno para separarlo visualmente */
-#page-delete-guitar .gjs-plg-flex-row > .gjs-plg-flex-column:last-child {
-  flex: 0 0 140px;           /* ancho fijo del contenedor del botón */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* El botón dentro del contenedor */
-#page-delete-guitar .gjs-plg-flex-row > .gjs-plg-flex-column:last-child button,
-#page-delete-guitar #btn-search {
-  width: 100%;
-  height: 42px;
-  border-radius: 12px;
+#iqisg9q-4-3 {
+  width: 90%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   background-color: rgb(36, 99, 235);
-  color: #fff;
+  color: rgba(255, 255, 255, 1);
   cursor: pointer;
-  border: none;
-  font-weight: 700;
-  padding: 0 12px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
-  transition: transform 0.12s ease, background 0.12s ease;
+  border-top-color: rgb(36, 99, 235);
+  border-right-color: rgb(36, 99, 235);
+  border-bottom-color: rgb(36, 99, 235);
+  border-left-color: rgb(36, 99, 235);
+  height: 30px;
+  align-self: flex-end;
 }
 
-#page-delete-guitar #btn-search:hover {
-  transform: translateY(-1px);
-  background-color: rgb(29, 78, 216);
-}
-
-/* Si por alguna razón el HTML coloca el botón directamente sin wrapper: */
-#page-delete-guitar td > button#btn-search {
-  width: 140px;
-  height: 42px;
-}
-
-/* Actions row (Eliminar) */
-#page-delete-guitar #form-actions {
-  display: flex;
-  gap: 12px;
-  margin-top: 16px;
-  align-items: center;
-  justify-content: flex-end;
-  width: 100%;
-  box-sizing: border-box;
-}
-#page-delete-guitar #form-actions .gjs-plg-flex-column:first-child { flex-basis: 75%; }
-#page-delete-guitar #form-actions .gjs-plg-flex-column:last-child {
+#i5sb9zi-3-3 {
   flex-basis: 25%;
-  display: flex;
-  justify-content: flex-end;
 }
 
-#page-delete-guitar #btn-delete {
-  width: 100%;
-  height: 40px;
-  border-radius: 12px;
-  background-color: rgb(220,38,38);
-  color: #fff;
-  cursor: pointer;
-  border: none;
-  font-weight: 600;
-  transition: background 0.2s ease;
-}
-#page-delete-guitar #btn-delete:hover { background-color: rgb(185,28,28); }
-
-/* Table spacing */
-#page-delete-guitar #form-table-delete td {
-  vertical-align: middle;
-  padding: 8px 6px;
+#ie9q2d7-3-3 {
+  padding-top: 50px;
+  padding-right: 150px;
+  padding-bottom: 50px;
+  padding-left: 150px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
 }
 
-/* Focus */
-#page-delete-guitar input:focus,
-#page-delete-guitar select:focus {
-  outline: 3px solid rgba(36,99,235,0.12);
-  outline-offset: 2px;
+#it6g1v-2-2-2-2-2 {
+  padding: 10px;
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 20px;
+  opacity: 75%;
 }
 
-/* Footer */
-#page-delete-guitar #footer-row {
-  justify-content: center;
-  padding: 40px 20px;
-}
-#page-delete-guitar #footer-col {
+#ilriti-2-2-2-2-2 {
   max-width: 1200px;
   display: flex;
   flex-direction: column;
-  padding-top: 16px;
-}
-#page-delete-guitar #footer-text {
-  text-align: center;
-  font-size: 0.8rem;
-  opacity: 0.75;
 }
 
-/* Responsive */
+#iv3be5-2-2-2-2-2 {
+  justify-content: center;
+  padding-top: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 80px;
+  min-height: 162px;
+}
+
+#iau9-2-2-2-2-2 {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(180deg, rgba(59, 130, 245, 0.11), white 14%);
+  background-position: 0px 0px;
+  background-size: 100% 100%;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-origin: padding-box;
+  color: #475569;
+}
+
+#ic8vfy3 {
+  flex-basis: 50%;
+}
+
+#ik9qqll {
+  flex-basis: 50%;
+}
+
+#itooyh7-2-3-3-2 {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-color: rgb(36, 99, 235);
+  border-right-color: rgb(36, 99, 235);
+  border-bottom-color: rgb(36, 99, 235);
+  border-left-color: rgb(36, 99, 235);
+  position: static;
+  text-align: left;
+  align-self: flex-start;
+}
+
+#iqisg9q-4-3-2 {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: rgb(36, 99, 235);
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+  border-top-color: rgb(36, 99, 235);
+  border-right-color: rgb(36, 99, 235);
+  border-bottom-color: rgb(36, 99, 235);
+  border-left-color: rgb(36, 99, 235);
+  height: 30px;
+}
+
 @media (max-width: 992px) {
-  #page-delete-guitar #form-section-delete { padding-left: 24px; padding-right: 24px; }
-  #page-delete-guitar #page-title { font-size: 2.2rem; }
-  #page-delete-guitar #form-actions .gjs-plg-flex-column:first-child,
-  #page-delete-guitar #form-actions .gjs-plg-flex-column:last-child {
-    flex-basis: 100%;
-    width: 100%;
-    justify-content: center;
+  .gjs-grid-row {
+    flex-direction: column;
   }
-  #page-delete-guitar #form-actions {
-    flex-direction: column-reverse;
-    gap: 10px;
-    align-items: stretch;
+
+  #it00l-2-2-2-2-2 {
+    flex-direction: row;
+  }
+
+  #iyd2-2-2-2-2-2 {
+    flex-direction: row;
   }
 }
 
-@media (max-width: 576px) {
-  #page-delete-guitar #form-section-delete { padding-left: 12px; padding-right: 12px; }
-
-  /* En móvil, apilar input y botón */
-  #page-delete-guitar .gjs-plg-flex-row { flex-direction: column; gap: 8px; }
-  #page-delete-guitar .gjs-plg-flex-row > .gjs-plg-flex-column:last-child { flex: 0 0 auto; width: 100%; }
-  #page-delete-guitar .gjs-plg-flex-row > .gjs-plg-flex-column:first-child { width: 100%; }
-
-  #page-delete-guitar #btn-search,
-  #page-delete-guitar #btn-delete {
-    width: 100%;
-    height: 44px;
-  }
-
-  #page-delete-guitar tbody td > div,
-  #page-delete-guitar .label-wrap {
-    text-align: center;
+@media (max-width: 768px) {
+  #iffs-2-2-2-2-2 {
+    display: none;
   }
 }

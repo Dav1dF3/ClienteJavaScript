@@ -1,308 +1,501 @@
-/* stylesactualizarguitarras.css — page-specific for Actualizar Guitarra
-   Assumes shared rules live in ../../css/main.css
-   Scoped under #page-update-guitar
-*/
-
-#page-update-guitar {
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-  background-image: linear-gradient(180deg, rgba(59, 130, 245, 0.11), white 14%);
-  color: #475569;
+.gjs-heading {
+  margin: 0;
+  color: rgba(29, 40, 55, 1);
 }
 
-/* Header (page-scoped overrides; main.css provides base layout) */
-#page-update-guitar #navbar-wrapper {
-  justify-content: center;
-  position: sticky;
-  top: 15px;
-  left: 0;
-  right: 0;
-  z-index: 9999;
-  padding: 0 20px;
-  background: transparent;
+.gjs-grid-column {
+  flex: 1 1 0%;
+  padding: 5px 0;
 }
 
-#page-update-guitar #navbar-column {
-  width: 100%;
+.gjs-grid-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-direction: row;
+  min-height: auto;
+  padding: 10px 0;
+}
+
+.gjs-link-box {
+  color: inherit;
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px;
+  max-width: 100%;
+  text-decoration: none;
+}
+
+.gjs-link {
+  vertical-align: top;
+  max-width: 100%;
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease 0s;
+}
+
+.gjs-grid-column.feature-item {
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 30%;
+}
+
+.gjs-grid-column.testimonial-item {
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 45%;
+  background-color: rgba(247, 247, 247, 0.23);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  align-items: flex-start;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-top-color: rgba(0, 0, 0, 0.06);
+  border-right-color: rgba(0, 0, 0, 0.06);
+  border-bottom-color: rgba(0, 0, 0, 0.06);
+  border-left-color: rgba(0, 0, 0, 0.06);
+}
+
+.gjs-text-blue {
+  color: rgb(36, 99, 235);
+}
+
+.gjs-link:hover {
+  color: rgb(36, 99, 235);
+  text-decoration: underline;
+}
+
+.gjs-container {
+  width: 90%;
+  margin: 0 auto;
   max-width: 1200px;
 }
 
-#page-update-guitar #navbar-row {
-  align-items: center;
-  justify-content: space-between;
-  padding: 0;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
-  backdrop-filter: blur(13px);
-  box-shadow: 0 2px 7px rgba(0,0,0,0.14);
+.gjs-section {
+  display: flex;
+  padding: 50px 0;
 }
 
-#page-update-guitar #navbar-logo-link { display: block; }
+.gjs-plg-flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  undefined: undefined;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+}
 
-#page-update-guitar #navbar-logo-text {
+.gjs-plg-flex-row {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+
+.gjs-plg-flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+}
+
+#miTabla-4 thead th {
+  position: sticky;
+  top: 0;
+  background: rgb(36, 99, 235);
+  color: #fff;
+  padding: 10px;
+}
+
+#miTabla-4 td,
+#miTabla-4 th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#i4hjm-2-2-2-2-4 {
   padding: 10px;
   font-family: Impact, Charcoal, sans-serif;
   color: rgb(36, 99, 235);
 }
 
-/* Nav links */
-#page-update-guitar #navbar-links-col a,
-#page-update-guitar #navbar-about-col a,
-#page-update-guitar #navbar-link-home,
-#page-update-guitar #navbar-link-instruments,
-#page-update-guitar #navbar-link-inventory,
-#page-update-guitar #navbar-link-about {
-  padding: 10px 20px;
+#iucmr-2-2-2-2-2-4 {
+  display: block;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+#iqjl-2-2-2-2-2-4 {
+  flex: 0 1 auto;
+}
+
+#icfyb-2-3-2-2-2-4 {
+  padding: 10px;
   font-family: Arial, Helvetica, sans-serif;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-/* Page title / hero */
-#page-update-guitar #page-title-row {
-  justify-content: center;
-  padding: 50px 20px;
+#icfyb-2-2-2-2-2-2-4 {
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: rgb(36, 99, 235);
 }
 
-#page-update-guitar #page-title-col {
+#infmy1-2-2-2-2-2-4 {
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#irtfd-2-2-2-2-2-4 {
+  flex: 0 1 auto;
+}
+
+#i88iz-2-2-2-2-2-4 {
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#icyzp-2-2-2-2-2-4 {
+  flex: 0 1 auto;
+}
+
+#it00l-2-2-2-2-2-4 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+#iffs-2-2-2-2-2-4 {
+  flex: 0 1 auto;
+}
+
+#iyd2-2-2-2-2-2-4 {
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  backdrop-filter: blur(13px);
+  box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.14);
+}
+
+#itjq-2-2-2-2-2-4 {
+  width: 100%;
   max-width: 1200px;
+}
+
+#i6po-2-2-2-2-2-4 {
+  justify-content: center;
+  position: sticky;
+  top: 15px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#irjua-2-2-2-2-2-4 {
+  font-size: 3rem;
+  text-align: center;
+  color: rgb(36, 99, 235);
+}
+
+#iycz3-2-2-2-2-2-4 {
+  max-width: 1200px;
+  align-items: center;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  align-items: center;
 }
 
-#page-update-guitar #page-title {
-  font-size: 2.8rem;
-  text-align: center;
-  color: rgb(36, 99, 235);
-  font-weight: 700;
-}
-
-/* Main form section */
-#page-update-guitar #form-section-update {
-  padding: 50px 150px;
-  display: flex;
+#irz7b-2-2-2-2-2-4 {
   justify-content: center;
-  box-sizing: border-box;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-#page-update-guitar #form-container {
-  width: 100%;
-  max-width: 900px;
-}
-
-/* Table / form */
-#page-update-guitar #form-table-update {
-  width: 100%;
-  border-collapse: collapse;
-  table-layout: fixed;
-}
-
-/* Label wrappers & spacing */
-#page-update-guitar tbody td > div,
-#page-update-guitar .label-wrap {
+#iics8yg-2-3-3-4 {
   padding: 10px;
-  box-sizing: border-box;
-  color: #0f172a;
-  font-size: 1rem;
+}
+
+#itooyh7-2-3-3-2-4 {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-color: rgb(36, 99, 235);
+  border-right-color: rgb(36, 99, 235);
+  border-bottom-color: rgb(36, 99, 235);
+  border-left-color: rgb(36, 99, 235);
+  position: static;
+  text-align: left;
+  align-self: flex-start;
+}
+
+#ic8vfy3-4 {
+  flex-basis: 50%;
+}
+
+#iqisg9q-4-3-5 {
+  width: 90%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: rgb(36, 99, 235);
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+  border-top-color: rgb(36, 99, 235);
+  border-right-color: rgb(36, 99, 235);
+  border-bottom-color: rgb(36, 99, 235);
+  border-left-color: rgb(36, 99, 235);
+  height: 30px;
+  align-self: flex-end;
+}
+
+#ik9qqll-4 {
+  flex-basis: 50%;
+}
+
+#ix8kez6-2-3-3-4 {
+  padding: 10px;
+}
+
+#itooyh7-2-3-3-5 {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-color: rgb(36, 99, 235);
+  border-right-color: rgb(36, 99, 235);
+  border-bottom-color: rgb(36, 99, 235);
+  border-left-color: rgb(36, 99, 235);
+}
+
+#ilw15ba-2-3-3-4 {
+  padding: 10px;
+}
+
+#igk6al6-2-3-3-4 {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-color: rgb(36, 99, 235);
+  border-right-color: rgb(36, 99, 235);
+  border-bottom-color: rgb(36, 99, 235);
+  border-left-color: rgb(36, 99, 235);
+}
+
+#it5oyyf-2-3-3-4 {
+  padding: 10px;
+}
+
+#i5alvcd-2-3-3-4 {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-color: rgb(36, 99, 235);
+  border-right-color: rgb(36, 99, 235);
+  border-bottom-color: rgb(36, 99, 235);
+  border-left-color: rgb(36, 99, 235);
+}
+
+#ii7tjyo-2-3-3-4 {
+  padding: 10px;
+}
+
+#ip0r8zo-2-3-3-4 {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-color: rgb(36, 99, 235);
+  border-right-color: rgb(36, 99, 235);
+  border-bottom-color: rgb(36, 99, 235);
+  border-left-color: rgb(36, 99, 235);
+}
+
+#i72qbrp-2-3-3-4 {
+  padding: 10px;
+}
+
+#i9lzivo-4 {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-color: rgb(36, 99, 235);
+  border-right-color: rgb(36, 99, 235);
+  border-bottom-color: rgb(36, 99, 235);
+  border-left-color: rgb(36, 99, 235);
+}
+
+#iuqlp6y-2-3-3-4 {
+  padding: 10px;
+}
+
+#itaw5zg-2-3-3-4 {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-color: rgb(36, 99, 235);
+  border-right-color: rgb(36, 99, 235);
+  border-bottom-color: rgb(36, 99, 235);
+  border-left-color: rgb(36, 99, 235);
+}
+
+#ilo8r8k-2-3-3-4 {
   text-align: left;
 }
 
-/* Inputs */
-#page-update-guitar input[type="text"],
-#page-update-guitar select {
+#ipwamy9-2-3-3-4 {
+  padding: 10px;
+}
+
+#iv8vgxu-4 {
   width: 100%;
-  border-radius: 12px;
-  border: 2px solid rgb(36, 99, 235);
-  padding: 8px 10px;
-  box-sizing: border-box;
-  background: #fff;
-  color: #0f172a;
-  font-size: 1rem;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-color: rgb(36, 99, 235);
+  border-right-color: rgb(36, 99, 235);
+  border-bottom-color: rgb(36, 99, 235);
+  border-left-color: rgb(36, 99, 235);
 }
 
-/* ===== REGLAS PARA FILA DE BÚSQUEDA (estructura real del HTML) =====
-   HTML:
-   <div id="code-search-row" class="gjs-plg-flex-row">
-     <div id="code-search-col" class="gjs-plg-flex-column"> <-- input
-     <div id="code-button-col" class="gjs-plg-flex-column"> <-- botón
-*/
-#page-update-guitar #code-search-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+#iqnj9da-2-3-3-4 {
   width: 100%;
-  box-sizing: border-box;
 }
 
-/* Input column: occupy available space */
-#page-update-guitar #code-search-col {
-  flex: 1 1 auto;
-  min-width: 0;
+#ie0kk3z-3-3-4 {
+  flex-basis: 75%;
 }
 
-/* Button column: fixed width so button isn't cramped */
-#page-update-guitar #code-button-col {
-  flex: 0 0 140px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Search button styling (inside the search row) */
-#page-update-guitar #code-button-col button,
-#page-update-guitar #btn-search {
+#iqisg9q-4-3-2-4 {
   width: 100%;
-  height: 42px;
-  border-radius: 12px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   background-color: rgb(36, 99, 235);
-  color: #fff;
+  color: rgba(255, 255, 255, 1);
   cursor: pointer;
-  border: none;
-  font-weight: 700;
-  padding: 0 12px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
-  transition: transform 0.12s ease, background 0.12s ease;
+  border-top-color: rgb(36, 99, 235);
+  border-right-color: rgb(36, 99, 235);
+  border-bottom-color: rgb(36, 99, 235);
+  border-left-color: rgb(36, 99, 235);
+  height: 30px;
 }
 
-#page-update-guitar #btn-search:hover {
-  transform: translateY(-1px);
-  background-color: rgb(29, 78, 216);
-}
-
-/* Fallback if button is placed directly under td */
-#page-update-guitar td > button#btn-search {
-  width: 140px;
-  height: 42px;
-}
-
-/* Actions row (Actualizar button) */
-#page-update-guitar #form-actions {
-  display: flex;
-  gap: 12px;
-  margin-top: 16px;
-  align-items: center;
-  justify-content: flex-end;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-#page-update-guitar #form-actions-left { flex-basis: 75%; }
-#page-update-guitar #form-actions-right {
+#i5sb9zi-3-3-4 {
   flex-basis: 25%;
-  display: flex;
-  justify-content: flex-end;
 }
 
-/* Update button */
-#page-update-guitar #btn-update {
-  width: 100%;
-  height: 40px;
-  border-radius: 12px;
-  background-color: rgb(34, 197, 94); /* green for update/save */
-  color: #fff;
-  cursor: pointer;
-  border: none;
-  font-weight: 600;
-  transition: background 0.15s ease, transform 0.12s ease;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+#ie9q2d7-3-3-4 {
+  padding-top: 50px;
+  padding-right: 150px;
+  padding-bottom: 50px;
+  padding-left: 150px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
 }
 
-#page-update-guitar #btn-update:hover {
-  transform: translateY(-1px);
-  background-color: rgb(16, 185, 129);
+#it6g1v-2-2-2-2-2-4 {
+  padding: 10px;
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 20px;
+  opacity: 75%;
 }
 
-/* Table spacing */
-#page-update-guitar #form-table-update td {
-  vertical-align: middle;
-  padding: 8px 6px;
-}
-
-/* Focus polish */
-#page-update-guitar input:focus,
-#page-update-guitar select:focus {
-  outline: 3px solid rgba(36, 99, 235, 0.12);
-  outline-offset: 2px;
-}
-
-/* Footer */
-#page-update-guitar #footer-row {
-  justify-content: center;
-  padding: 40px 20px;
-}
-
-#page-update-guitar #footer-col {
+#ilriti-2-2-2-2-2-4 {
   max-width: 1200px;
   display: flex;
   flex-direction: column;
-  padding-top: 16px;
 }
 
-#page-update-guitar #footer-text {
-  text-align: center;
-  font-size: 0.8rem;
-  opacity: 0.75;
+#iv3be5-2-2-2-2-2-4 {
+  justify-content: center;
+  padding-top: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 80px;
+  min-height: 162px;
 }
 
-/* Responsive */
+#iau9-2-2-2-2-2-4 {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(180deg, rgba(59, 130, 245, 0.11), white 14%);
+  background-position: 0px 0px;
+  background-size: 100% 100%;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-origin: padding-box;
+  color: #475569;
+}
+
 @media (max-width: 992px) {
-  #page-update-guitar #form-section-update {
-    padding-left: 24px;
-    padding-right: 24px;
+  .gjs-grid-row {
+    flex-direction: column;
   }
 
-  #page-update-guitar #page-title {
-    font-size: 2.2rem;
+  #it00l-2-2-2-2-2-4 {
+    flex-direction: row;
   }
 
-  /* action columns stack on smaller screens */
-  #page-update-guitar #form-actions-left,
-  #page-update-guitar #form-actions-right {
-    flex-basis: 100%;
-    width: 100%;
-    justify-content: center;
-  }
-
-  #page-update-guitar #form-actions {
-    flex-direction: column-reverse;
-    gap: 10px;
-    align-items: stretch;
-  }
-
-  /* ensure table / inputs are fluid */
-  #page-update-guitar #form-table-update,
-  #page-update-guitar #form-container {
-    width: 100%;
+  #iyd2-2-2-2-2-2-4 {
+    flex-direction: row;
   }
 }
 
-@media (max-width: 576px) {
-  #page-update-guitar #form-section-update {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-
-  /* On mobile, stack input and search button */
-  #page-update-guitar #code-search-row {
-    flex-direction: column;
-    gap: 8px;
-  }
-  #page-update-guitar #code-button-col {
-    flex: 0 0 auto;
-    width: 100%;
-  }
-  #page-update-guitar #code-search-col {
-    width: 100%;
-  }
-
-  #page-update-guitar #btn-search,
-  #page-update-guitar #btn-update {
-    width: 100%;
-    height: 44px;
-  }
-
-  #page-update-guitar tbody td > div,
-  #page-update-guitar .label-wrap {
-    text-align: center;
+@media (max-width: 768px) {
+  #iffs-2-2-2-2-2-4 {
+    display: none;
   }
 }

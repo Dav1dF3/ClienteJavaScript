@@ -32,9 +32,8 @@
 }
 #page-add-guitar #form-section-case {
   padding: 0 150px;
-  display: none; /* oculto por defecto */
-  opacity: 0;
-  transition: opacity 200ms ease;
+  display: none; /* hidden by default; shown when radio checked */
+  transition: opacity 180ms ease;
 }
 
 /* Table/form containers */
@@ -61,7 +60,7 @@
   box-sizing: border-box;
 }
 
-/* Inputs / select styling (guitar + case form) */
+/* Inputs / select styling (guitar form) */
 #page-add-guitar #input-code-guitar,
 #page-add-guitar #input-name-guitar,
 #page-add-guitar #input-brand-guitar,
@@ -135,7 +134,7 @@
   justify-content: center;
 }
 
-/* Labels that act as radio buttons — visuals */
+/* Labels that act as radio buttons — visuals (scoped) */
 #page-add-guitar label[for="funda-si"],
 #page-add-guitar label[for="funda-no"],
 #page-add-guitar #label-funda-si,
@@ -151,19 +150,14 @@
   transition: background 120ms ease, border-color 120ms ease, color 120ms ease;
 }
 
-/* --- Mostrar funda solo cuando se selecciona "Sí" --- */
-#page-add-guitar #funda-si:checked ~ #form-section-case {
+/* Show case section when 'si' radio is checked (scoped) */
+/* radios are children of body inside this page, so we use sibling combinators */
+#page-add-guitar #funda-si:checked ~ #form-section-case,
+#page-add-guitar #funda-si:checked ~ #form-section-guitar ~ #form-section-case {
   display: block;
-  opacity: 1;
 }
 
-/* --- Ocultar funda cuando se selecciona "No" --- */
-#page-add-guitar #funda-no:checked ~ #form-section-case {
-  display: none;
-  opacity: 0;
-}
-
-/* Highlight selected label(s) */
+/* Highlight selected label(s) (scoped variant to reach labels inside sections) */
 #page-add-guitar #funda-si:checked ~ #form-section-guitar label[for="funda-si"],
 #page-add-guitar #funda-no:checked ~ #form-section-guitar label[for="funda-no"],
 #page-add-guitar #funda-si:checked ~ #form-section-case label[for="funda-si"],
@@ -181,10 +175,7 @@
 #page-add-guitar #input-stock-guitar:focus,
 #page-add-guitar #input-date-guitar:focus,
 #page-add-guitar #select-type-guitar:focus,
-#page-add-guitar #input-material-guitar:focus,
-#page-add-guitar #input-code-case:focus,
-#page-add-guitar #input-name-case:focus,
-#page-add-guitar #input-price-case:focus {
+#page-add-guitar #input-material-guitar:focus {
   outline: 3px solid rgba(36,99,235,0.12);
   outline-offset: 2px;
 }
@@ -241,39 +232,4 @@
     font-size: 14px;
     height: 36px;
   }
-}
-
-/* ---------------------------
-   Mostrar / ocultar filas 'case' según radio
-   --------------------------- */
-
-/* Ocultar por defecto las filas de la funda (table rows) */
-#page-add-guitar #row-code-case,
-#page-add-guitar #row-name-case,
-#page-add-guitar #row-price-case {
-  display: none !important;
-}
-
-/* Mostrar filas cuando #funda-si esté seleccionado.
-   Usamos display: table-row para que se rendericen correctamente en tablas. */
-#page-add-guitar #funda-si:checked ~ #form-section-guitar #row-code-case,
-#page-add-guitar #funda-si:checked ~ #form-section-guitar #row-name-case,
-#page-add-guitar #funda-si:checked ~ #form-section-guitar #row-price-case {
-  display: table-row !important;
-}
-
-/* Asegurar explícitamente que con 'no' queden ocultas (fallback) */
-#page-add-guitar #funda-no:checked ~ #form-section-guitar #row-code-case,
-#page-add-guitar #funda-no:checked ~ #form-section-guitar #row-name-case,
-#page-add-guitar #funda-no:checked ~ #form-section-guitar #row-price-case {
-  display: none !important;
-}
-
-/* (Opcional) Si quieres un cambio visual más suave, puedes aplicar transición
-   en las celdas internas — pero la aparición real será instantánea porque
-   display no se anima. */
-#page-add-guitar #row-code-case td,
-#page-add-guitar #row-name-case td,
-#page-add-guitar #row-price-case td {
-  transition: background-color 160ms ease, color 160ms ease;
 }
