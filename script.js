@@ -69,10 +69,10 @@ if (addButton) {
 
 
 //Buscar Guitarra
-const buscarButton = document.getElementById('buscarButton');
+const buscarButton = document.getElementById('btn-search-guitar');
 if (buscarButton) {
   buscarButton.addEventListener('click', async function() {
-      const codigo = document.getElementById('codigo').value.trim();
+      const codigo = document.getElementById('input-code-search').value.trim();
       if (!codigo) {
           alert("Por favor, ingrese el código.");
           return;
@@ -92,12 +92,22 @@ if (buscarButton) {
           }
           const data = await response.json();
           
-          document.getElementById('nombre').value = data.nombre || '';
-          document.getElementById('marca').value = data.marca || '';
-          document.getElementById('precio').value = data.precioBase || '';
-          document.getElementById('stock').value = data.stock || '';
-          document.getElementById('tipo').value = data.tipo || '';
-          document.getElementById('materialCuerpo').value = data.materialCuerpo || '';
+          document.getElementById('input-name-search').value = data.nombre || '';
+          document.getElementById('input-brand-search').value = data.marca || '';
+          document.getElementById('input-price-search').value = data.precioBase || '';
+          document.getElementById('input-stock-search').value = data.stock || '';
+          document.getElementById('input-type-search').value = data.tipo || '';
+          document.getElementById('input-material-search').value = data.materialCuerpo || '';
+          const caseElement = document.getElementById('input-case-search');
+
+          if (caseElement) {
+              if (data.fundas && data.fundas.length > 0) {
+                  const primeraFunda = data.fundas[0];
+                  caseElement.value = primeraFunda.codigo || '';
+              } else {
+                  caseElement.value = '';
+              }
+          }
           
       } catch (error) {
           alert("Error al buscar el código");
