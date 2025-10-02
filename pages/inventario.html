@@ -1,77 +1,145 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <title>Inventario</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="robots" content="index,follow">
-    <meta name="generator" content="GrapesJS Studio">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/stylesinventario.css">
-  </head>
+<head>
+  <title>Inventario</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <meta name="generator" content="GrapesJS Studio">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/stylesinventario.css">
+  <link rel="stylesheet" type= "text/css" href="../jquery-ui-1.14.1.custom/jquery-ui.css">
+  <script src="../jquery-3.7.1.min.js"></script>
+  <script src="../jquery-ui-1.14.1.custom/jquery-ui.js"></script>
 
-  <body id="page-inventory">
-    <div id="header-row" class="gjs-grid-row">
-      <div id="header-col" class="gjs-grid-column">
-        <div id="header-inner-row" class="gjs-grid-row">
-          <div id="logo-col" class="gjs-grid-column">
-            <a id="logo-link" href="./inicio.html" class="gjs-link-box">
-              <div id="logo-text">PENTACORD</div>
-            </a>
-          </div>
-          <div id="nav-col" class="gjs-grid-column">
-            <div id="nav-row" class="gjs-grid-row">
-              <div id="nav-col-inner" class="gjs-grid-column">
-                <a id="nav-link-home" href="./inicio.html" class="gjs-link">Inicio</a>
-                <a id="nav-link-instruments" href="./instrumentos.html" class="gjs-link">Instrumentos</a>
-                <a id="nav-link-inventory" href="./inventario.html" class="gjs-link">Inventario</a>
-                <a id="nav-link-about" href="./acerca-de.html" class="gjs-link">Acerca de…</a>
-              </div>
+  
+</head>
+
+<body id="page-inventory">
+  <div id="header-row" class="gjs-grid-row">
+    <div id="header-col" class="gjs-grid-column">
+      <div id="header-inner-row" class="gjs-grid-row">
+        <div id="logo-col" class="gjs-grid-column">
+          <a id="logo-link" href="./inicio.html" class="gjs-link-box">
+            <div id="logo-text">PENTACORD</div>
+          </a>
+        </div>
+        <div id="nav-col" class="gjs-grid-column">
+          <div id="nav-row" class="gjs-grid-row">
+            <div id="nav-col-inner" class="gjs-grid-column">
+              <a id="nav-link-home" href="./inicio.html" class="gjs-link">Inicio</a>
+              <a id="nav-link-instruments" href="./instrumentos.html" class="gjs-link">Instrumentos</a>
+              <a id="nav-link-inventory" href="./inventario.html" class="gjs-link">Inventario</a>
+              <a id="nav-link-about" href="./acerca-de.html" class="gjs-link">Acerca de…</a>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div id="hero-row" class="gjs-grid-row">
-      <div id="hero-col" class="gjs-grid-column">
-        <h1 id="hero-title" class="gjs-heading">Inventario</h1>
-      </div>
+  <div id="hero-row" class="gjs-grid-row">
+    <div id="hero-col" class="gjs-grid-column">
+      <h1 id="hero-title" class="gjs-heading">Inventario</h1>
     </div>
+  </div>
 
-    <section class="gjs-section" id="inventory-section">
-      <div class="gjs-container" id="inventory-container">
-        <div class="tabla-contenedor">
-          <div class="tabla-scroll">
-            <table id="mi-tabla">
-              <thead>
-                <tr>
-                  <th>Código</th>
-                  <th>Nombre</th>
-                  <th>Marca</th>
-                  <th>Precio</th>
-                  <th>Stock</th>
-                  <th>Fecha de creación</th>
-                  <th>Instrumento</th>
-                </tr>
-              </thead>
-              <tbody id="tabla-body">
-                <!-- Filas dinámicas desde REST -->
-              </tbody>
-            </table>
-          </div>
+  <section class="gjs-section" id="inventory-section">
+    <div class="gjs-container" id="inventory-container">
+
+      <!-- Contenedor del botón -->
+      <div class="filtros-container">
+        <button id="btn-filtros">Filtros</button>
+      </div>
+
+      <!-- Modal -->
+      <div id="modal-filtros" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Filtros</h2>
+          <form id="form-filtros">
+            
+            <div class="filtro-item">
+              <input type="checkbox" id="chk-nombre">
+              <label for="chk-nombre">Nombre</label>
+              <input type="text" placeholder="Ingrese nombre">
+            </div>
+
+            <div class="filtro-item">
+              <input type="checkbox" id="chk-marca">
+              <label for="chk-marca">Marca</label>
+              <input type="text" placeholder="Ingrese marca">
+            </div>
+
+            <div class="filtro-item">
+              <input type="checkbox" id="chk-preciomin">
+              <label for="chk-preciomin">Precio min</label>
+              <input type="number" placeholder="Ingrese precio mínimo">
+            </div>
+
+            <div class="filtro-item">
+              <input type="checkbox" id="chk-preciomax">
+              <label for="chk-preciomax">Precio max</label>
+              <input type="number" placeholder="Ingrese precio máximo">
+            </div>
+
+            <div class="filtro-item">
+              <input type="checkbox" id="chk-stockmin">
+              <label for="chk-stockmin">Stock min</label>
+              <input type="number" placeholder="Ingrese stock mínimo">
+            </div>
+
+            <div class="filtro-item">
+              <input type="checkbox" id="chk-stockmax">
+              <label for="chk-stockmax">Stock max</label>
+              <input type="number" placeholder="Ingrese stock máximo">
+            </div>
+
+            
+
+            
+
+            <button type="submit">Aplicar filtros</button>
+          </form>
         </div>
       </div>
-    </section>
 
-    <div id="footer-row" class="gjs-grid-row">
-      <div id="footer-col" class="gjs-grid-column">
-        <div id="footer-copyright" class="gjs-text-blue">
-          Copyright © 2025 Pentacord Company
+      <div class="tabla-contenedor">
+        <div class="tabla-scroll">
+          <table id="mi-tabla">
+            <thead>
+              <tr>
+                <th>Código</th>
+                <th>Nombre</th>
+                <th>Marca</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th>Fecha de creación</th>
+                <th>Instrumento</th>
+              </tr>
+            </thead>
+            <tbody id="tabla-body">
+              <!-- Filas dinámicas desde REST -->
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
-  </body>
+  </section>
+
+  <div id="footer-row" class="gjs-grid-row">
+    <div id="footer-col" class="gjs-grid-column">
+      <div id="footer-copyright" class="gjs-text-blue">
+        Copyright © 2025 Pentacord Company
+      </div>
+    </div>
+  </div>
+
+  
+  <script src="../js/modal.js"></script>
+  
+</body>
 
 </html>
+
