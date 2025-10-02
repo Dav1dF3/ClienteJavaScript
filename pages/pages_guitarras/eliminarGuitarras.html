@@ -1,117 +1,136 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <title>Instrumentos - Eliminar Guitarra</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="robots" content="index,follow" />
-    <meta name="generator" content="GrapesJS Studio" />
-    <link rel="stylesheet" href="../../css/main.css">
-    <link rel="stylesheet" href="../../css/css_guitarras/styleseliminarguitarras.css">
-  </head>
+<head>
+  <title>Instrumentos - Eliminar Guitarra</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="robots" content="index,follow" />
+  <meta name="generator" content="GrapesJS Studio" />
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/css_guitarras/styleseliminarguitarras.css">
+</head>
 
-  <body id="page-delete-guitar">
-    <div id="header-row" class="gjs-grid-row">
-      <div id="header-col" class="gjs-grid-column">
-        <div id="header-inner-row" class="gjs-grid-row">
-          <div id="logo-col" class="gjs-grid-column">
-            <a id="logo-link" href="../inicio.html" class="gjs-link-box">
-              <div id="logo-text">PENTACORD</div>
-            </a>
-          </div>
-          <div id="nav-col" class="gjs-grid-column">
-            <div id="nav-row" class="gjs-grid-row">
-              <div id="nav-col-inner" class="gjs-grid-column">
-                <a id="nav-link-home" href="../inicio.html" class="gjs-link">Inicio</a>
-                <a id="nav-link-instruments" href="../instrumentos.html" class="gjs-link">Instrumentos</a>
-                <a id="nav-link-inventory" href="../inventario.html" class="gjs-link">Inventario</a>
-                <a id="nav-link-about" href="../acerca-de.html" class="gjs-link">Acerca de…</a>
-              </div>
+<body id="page-delete-guitar">
+  <div id="header-row" class="gjs-grid-row">
+    <div id="header-col" class="gjs-grid-column">
+      <div id="header-inner-row" class="gjs-grid-row">
+        <div id="logo-col" class="gjs-grid-column">
+          <a id="logo-link" href="../inicio.html" class="gjs-link-box">
+            <div id="logo-text">PENTACORD</div>
+          </a>
+        </div>
+        <div id="nav-col" class="gjs-grid-column">
+          <div id="nav-row" class="gjs-grid-row">
+            <div id="nav-col-inner" class="gjs-grid-column">
+              <a id="nav-link-home" href="../inicio.html" class="gjs-link">Inicio</a>
+              <a id="nav-link-instruments" href="../instrumentos.html" class="gjs-link">Instrumentos</a>
+              <a id="nav-link-inventory" href="../inventario.html" class="gjs-link">Inventario</a>
+              <a id="nav-link-about" href="../acerca-de.html" class="gjs-link">Acerca de…</a>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- TÍTULO -->
-    <div id="page-title-row" class="gjs-grid-row">
-      <div id="page-title-col" class="gjs-grid-column">
-        <h1 id="page-title" class="gjs-heading">Eliminar Guitarra</h1>
-      </div>
+  <!-- TÍTULO -->
+  <div id="page-title-row" class="gjs-grid-row">
+    <div id="page-title-col" class="gjs-grid-column">
+      <h1 id="page-title" class="gjs-heading">Eliminar Guitarra</h1>
     </div>
+  </div>
 
-    <!-- SECCIÓN PRINCIPAL -->
-    <section id="form-section-delete" class="gjs-section">
-      <div id="form-container" class="gjs-container">
-        <table id="form-table-delete">
-          <tbody id="form-body">
-            <tr>
-              <td>
-                <div><b>Código</b></div>
-              </td>
-              <td>
-                <div class="gjs-plg-flex-row">
-                  <div class="gjs-plg-flex-column">
-                    <input type="text" id="input-code" />
-                  </div>
-                  <div class="gjs-plg-flex-column">
-                    <button type="button" id="btn-search">Buscar</button>
-                  </div>
+  <!-- SECCIÓN PRINCIPAL -->
+  <section id="form-section-delete" class="gjs-section">
+    <div id="form-container" class="gjs-container">
+      <table id="form-table-delete">
+        <tbody id="form-body">
+          <tr>
+            <td>
+              <div><b>Código</b></div>
+            </td>
+            <td>
+              <div class="gjs-plg-flex-row">
+                <div class="gjs-plg-flex-column">
+                  <input type="text" id="input-code" />
                 </div>
-              </td>
-            </tr>
-            <tr>
-              <td><div><b>Nombre</b></div></td>
-              <td><input type="text" id="input-name" readonly /></td>
-            </tr>
-            <tr>
-              <td><div><b>Marca</b></div></td>
-              <td><input type="text" id="input-brand" readonly /></td>
-            </tr>
-            <tr>
-              <td><div><b>Precio</b></div></td>
-              <td><input type="text" id="input-price" readonly /></td>
-            </tr>
-            <tr>
-              <td><div><b>Stock</b></div></td>
-              <td><input type="text" id="input-stock" readonly /></td>
-            </tr>
-            <tr>
-              <td><div><b>Fecha de creación</b></div></td>
-              <td><input type="text" id="input-date" readonly /></td>
-            </tr>
-            <tr>
-              <td><div><b>Tipo</b></div></td>
-              <td><input type="text" id="input-type" readonly /></td>
-            </tr>
-            <tr>
-              <td><div><b>Material del cuerpo</b></div></td>
-              <td><input type="text" id="input-material" readonly /></td>
-            </tr>
-            <tr>
-              <td><div><b>Funda</b></div></td>
-              <td><input type="text" id="input-case" readonly /></td>
-            </tr>
-          </tbody>
-        </table>
+                <div class="gjs-plg-flex-column">
+                  <button type="button" id="btn-search">Buscar</button>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div><b>Nombre</b></div>
+            </td>
+            <td><input type="text" id="input-name" readonly /></td>
+          </tr>
+          <tr>
+            <td>
+              <div><b>Marca</b></div>
+            </td>
+            <td><input type="text" id="input-brand" readonly /></td>
+          </tr>
+          <tr>
+            <td>
+              <div><b>Precio</b></div>
+            </td>
+            <td><input type="text" id="input-price" readonly /></td>
+          </tr>
+          <tr>
+            <td>
+              <div><b>Stock</b></div>
+            </td>
+            <td><input type="text" id="input-stock" readonly /></td>
+          </tr>
+          <tr>
+            <td>
+              <div><b>Fecha de creación</b></div>
+            </td>
+            <td><input type="text" id="input-date" readonly /></td>
+          </tr>
+          <tr>
+            <td>
+              <div><b>Tipo</b></div>
+            </td>
+            <td><input type="text" id="input-type" readonly /></td>
+          </tr>
+          <tr>
+            <td>
+              <div><b>Material del cuerpo</b></div>
+            </td>
+            <td><input type="text" id="input-material" readonly /></td>
+          </tr>
+          <tr>
+            <td>
+              <div><b>Funda</b></div>
+            </td>
+            <td><input type="text" id="input-case" readonly /></td>
+          </tr>
+        </tbody>
+      </table>
 
-        <!-- BOTÓN ELIMINAR -->
-        <div class="gjs-plg-flex-row" id="form-actions">
-          <div class="gjs-plg-flex-column"></div>
-          <div class="gjs-plg-flex-column">
-            <button type="button" id="btn-delete">Eliminar</button>
-          </div>
+      <!-- BOTÓN ELIMINAR -->
+      <div class="gjs-plg-flex-row" id="form-actions">
+        <div class="gjs-plg-flex-column"></div>
+        <div class="gjs-plg-flex-column">
+          <button type="button" id="btn-delete">Eliminar</button>
         </div>
       </div>
-    </section>
-
-    <!-- FOOTER -->
-    <div id="footer-row" class="gjs-grid-row">
-      <div id="footer-col" class="gjs-grid-column">
-        <div id="footer-text" class="gjs-text-blue">Copyright © 2025 Pentacord Company</div>
-      </div>
     </div>
-  </body>
+  </section>
+
+  <!-- FOOTER -->
+  <div id="footer-row" class="gjs-grid-row">
+    <div id="footer-col" class="gjs-grid-column">
+      <div id="footer-text" class="gjs-text-blue">Copyright © 2025 Pentacord Company</div>
+    </div>
+  </div>
+</body>
+
+<script src="../../js/config.js"></script>
+<script src="../../js/eliminarguitarra.js"></script>
 
 </html>
